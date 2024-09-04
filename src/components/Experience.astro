@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Dic 2022 - Ago 2024",
+    title: "Desarrollador backend",
+    company: "RYC Consultores",
+    description:
+      "Trabaje para el cliente Consorcio, en donde participe en proyectos importantes. El primer proyecto se llamaba Documatico, el cual tenia como proposito mejorar la obtención de los documentos, ya sea para pólizas de vida o salud. Luego fui parte del proyecto de Salud, donde mi objetivo fue solucionar el manejo de datos y la correcta obtencion de los mismos. Y por ultimo, me encargue del backend del proyecto Ncategory, el cual consistia en manejar grandes volumenes de datos, utilizando las herramientas de Python y OracleDB, para una correcta insersion de los datos.",
+  },
+  {
+    date: "Ene 2022 - Jun 2022",
+    title: "Arquitecto Cloud Junior",
+    company: "Trebol-IT",
+    description:
+      "Realizar automatización de despliegues en ambiente de certificación y producción con Terraform. Desplegar aplicaciones en GCP, Diseñar arquitectura AWS para automatizar tiempo de cargas, Realizar migración a contenedores Docker, Realizar despliegue de aplicación UNITY en AWS",
+  },
+  {
+    date: "Mar 2020 - Dic 2021",
+    title: "Desarrollador backend junior",
+    company: "Trebol-IT",
+    description:
+      "En mi primera experiencia laboral, me enfrente al desafio de ingresar a un proyecto llamado Solventa, el cual consistia en migrar microservicios de C# a typeScript con NodeJS. Luego estuve en el equipo de Admision para la CLinica Alemana, donde fui parte del equipo de desarrollo para el area de Financiamiento con ReactJS y Angular. Tambien participe en el area de Finanzas y admision, con tecnologias frontend como Angular y en el Backend NodeJS y TypeScript. Por ultimo, integre el equipo de Roles y Perfiles, donde trabaje con tecnologias como JavaScript, NodeJS y Angular",
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
