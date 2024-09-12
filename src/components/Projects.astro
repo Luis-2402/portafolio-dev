@@ -1,39 +1,31 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import Angular from "./icons/Angular.astro"
+import Javascript from "./icons/Javascript.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  ANGULAR: {
+    name: "Angular",
     class: "bg-black text-white",
-    icon: NextJS,
+    icon: Angular,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  JAVASCRIPT: {
+    name: "JavaScript",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: Javascript,
   },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "APP - POKEDEX",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Creación y diseño de una pokedex usando pokeapi.co, una API de Pokemon que nos permite obtener una lista y características de los distintos tipos de Pokemon.",
+    link: "https://applicacion-pokedex.netlify.app/",
+    github: "https://github.com/Luis-2402/app-pokedex",
+    image: "/projects/pokedex.webp",
+    tags: [TAGS.ANGULAR, TAGS.JAVASCRIPT],
   },
 ]
 ---
@@ -44,7 +36,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Pokedex" class="object-cover object-top w-full h-46 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} />
     </div>
   </div>
 
@@ -71,7 +63,7 @@ const PROJECTS = [
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
-              Code
+              Code GitHub
               
             </LinkButton>
           )}
